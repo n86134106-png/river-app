@@ -27,8 +27,15 @@ plt.rcParams['axes.unicode_minus'] = False
 # 1. 基礎設定與參數
 # -------------------------
 st.set_page_config(page_title="無測站流量推估系統", page_icon="logo.png", layout="wide")
-
-# 欄位名稱設定 (需與 Excel 一致)
+# 隱藏 Streamlit 預設的選單和頁尾
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)# 欄位名稱設定 (需與 Excel 一致)
 COL_REGION = "region"  # 必須要有這個欄位才能分區
 COL_STA_ID = "station_id"
 COL_STA_NAME = "station_name"
