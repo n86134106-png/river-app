@@ -26,7 +26,7 @@ plt.rcParams['axes.unicode_minus'] = False
 # -------------------------
 # 1. 基礎設定與參數
 # -------------------------
-st.set_page_config(page_title="無測站流量推估系統", page_icon="🌊", layout="wide")
+st.set_page_config(page_title="無測站流量推估系統", page_icon="logo.png", layout="wide")
 
 # 欄位名稱設定 (需與 Excel 一致)
 COL_REGION = "region"  # 必須要有這個欄位才能分區
@@ -164,7 +164,7 @@ st.markdown("""
 # --- [左側側邊欄] ---
 st.sidebar.header("1. 資料來源")
 uploaded_file = st.sidebar.file_uploader("上傳訓練資料 (Excel)", type=["xlsx"])
-DEFAULT_PATH = Path("/Users/xieyishan/Desktop/python/1213觀測值和變量.xlsx")
+DEFAULT_PATH = Path("data.xlsx")
 
 df = None
 if uploaded_file:
